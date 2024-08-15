@@ -1,0 +1,12 @@
+.DEFAULT_GOAL := help
+
+help: ## Displays makefile commands
+	@grep -E '^[a-zA-Z0-9_-]+:.?## .$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
+
+install:  ## Install dev-requirements and pre-commit
+	@echo "----Installing Developer Requirements----"
+	pip install -r dev-requirements.txt
+	@echo "----Installing Commit Hooks----"
+	pre-commit install
+	pre-commit install --hook-type commit-msg
+	@echo "----Done----"
