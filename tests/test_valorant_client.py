@@ -56,22 +56,6 @@ def test_get_map_by_uuid(mock_get, api_client, uuid):
     mock_get.assert_called_once_with(expected_url)
 
 
-@patch.object(ValorantClient, "_get")
-def test_get_all_agents(mock_get, api_client):
-    expected_url = f"{api_client.base_url}/agents"
-    expected_params = {"language": "en-US", "isPlayableCharacter": True}
-    api_client.get_all_agents()
-    mock_get.assert_called_once_with(expected_url, params=expected_params)
-
-
-@patch.object(ValorantClient, "_get")
-def test_get_agent_by_uuid(mock_get, api_client, uuid):
-    expected_url = f"{api_client.base_url}/agents/{uuid}"
-    expected_params = {"language": "en-US"}
-    api_client.get_agent_by_uuid(uuid)
-    mock_get.assert_called_once_with(expected_url, params=expected_params)
-
-
 @pytest.mark.parametrize(
     "language, is_playable_character",
     [
@@ -90,7 +74,7 @@ def test_get_all_agents_parametrized(mock_get, api_client, language, is_playable
 
 @pytest.mark.parametrize("language", ["en-US", "es-ES", "fr-FR"])
 @patch.object(ValorantClient, "_get")
-def test_get_agent_by_uuid_with_different_languages(mock_get, api_client, uuid, language):
+def test_get_agent_by_uuid(mock_get, api_client, uuid, language):
     expected_url = f"{api_client.base_url}/agents/{uuid}"
     expected_params = {"language": language}
     api_client.get_agent_by_uuid(uuid, language=language)
