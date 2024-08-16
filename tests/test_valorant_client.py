@@ -1,5 +1,4 @@
 from unittest.mock import MagicMock, patch
-from uuid import uuid4
 
 import pytest
 
@@ -9,11 +8,6 @@ from valorant_client.client import ValorantClient
 @pytest.fixture
 def api_client():
     return ValorantClient()
-
-
-@pytest.fixture()
-def uuid():
-    return uuid4()
 
 
 @patch("valorant_client.client.get")
