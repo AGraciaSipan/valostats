@@ -81,7 +81,7 @@ def test_map_initialization(map_metadata):
     assert map_instance.callouts[1].region_name == map_metadata["callouts"][1]["regionName"]
 
 
-def test_map_initialization_with_default_callouts(empty_map_metadata):
+def test_map_initialization_with_empty_values(empty_map_metadata):
     map_instance = Map(empty_map_metadata)
     assert map_instance.uuid == empty_map_metadata["uuid"]
     assert map_instance.display_name == empty_map_metadata["displayName"]
