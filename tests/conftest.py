@@ -5,4 +5,4 @@ import pytest
 
 @pytest.fixture()
 def uuid():
-    return str(uuid4())
+    return uuid4()
