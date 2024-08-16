@@ -85,4 +85,11 @@ def test_map_initialization_with_default_callouts(empty_map_metadata):
     map_instance = Map(empty_map_metadata)
     assert map_instance.uuid == empty_map_metadata["uuid"]
     assert map_instance.display_name == empty_map_metadata["displayName"]
+    assert map_instance.display_icon == ""
+    assert map_instance.list_view_icon == ""
+    assert map_instance.splash == ""
+    assert map_instance.x_multiplier == 1.0
+    assert map_instance.y_multiplier == 1.0
+    assert map_instance.x_scalar_to_add == 0.0
+    assert map_instance.x_scalar_to_add == 0.0
     assert len(map_instance.callouts) == 0
