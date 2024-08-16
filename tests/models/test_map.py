@@ -4,7 +4,7 @@ from uuid import UUID
 
 import pytest
 
-from src.models.map import Callout, GameMap, Location
+from src.models.game_map import Callout, GameMap, Location
 
 
 @pytest.fixture()

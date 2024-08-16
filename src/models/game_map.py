@@ -101,7 +101,7 @@ class GameMap:
 
     def to_json(self, path: str) -> None:
         with open(path, "w") as file:
-            json.dump(self.to_dict(), file, indent=4)
+            json.dump(self.to_dict(), file, indent=2)
 
 
 class MapUUIDs(Enum):
