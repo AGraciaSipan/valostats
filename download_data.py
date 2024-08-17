@@ -1,7 +1,7 @@
 import os
 from logging import INFO, basicConfig, getLogger
 
-from src.models.game_map import GameMap, MapUUIDs
+from src.models.game_map.game_map import GameMap, MapUUIDs
 from valorant_client.client import ValorantClient
 
 basicConfig(level=INFO)
