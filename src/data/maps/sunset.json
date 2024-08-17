@@ -1,0 +1,149 @@
+{
+  "uuid": "92584fbe-486a-b1b2-9faa-39b0f486b498",
+  "displayName": "Sunset",
+  "displayIcon": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/displayicon.png",
+  "listViewIcon": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/listviewicon.png",
+  "splash": "https://media.valorant-api.com/maps/92584fbe-486a-b1b2-9faa-39b0f486b498/splash.png",
+  "xMultiplier": 7.8e-05,
+  "yMultiplier": -7.8e-05,
+  "xScalarToAdd": 0.5,
+  "yScalarToAdd": 0.515625,
+  "callouts": [
+    {
+      "regionName": "Boba",
+      "superRegionName": "B",
+      "location": {
+        "x": 2200,
+        "y": -4800
+      }
+    },
+    {
+      "regionName": "Tiles",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -1800,
+        "y": 400
+      }
+    },
+    {
+      "regionName": "Market",
+      "superRegionName": "B",
+      "location": {
+        "x": -200,
+        "y": -3400
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "B",
+      "location": {
+        "x": -600,
+        "y": -5850
+      }
+    },
+    {
+      "regionName": "Main",
+      "superRegionName": "B",
+      "location": {
+        "x": -2000,
+        "y": -5650
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "B",
+      "location": {
+        "x": -3400,
+        "y": -2600
+      }
+    },
+    {
+      "regionName": "Bottom",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -1800,
+        "y": -2025
+      }
+    },
+    {
+      "regionName": "Courtyard",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -600,
+        "y": -1200
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "A",
+      "location": {
+        "x": -1800,
+        "y": 2000
+      }
+    },
+    {
+      "regionName": "Main",
+      "superRegionName": "A",
+      "location": {
+        "x": -400,
+        "y": 2200
+      }
+    },
+    {
+      "regionName": "Link",
+      "superRegionName": "A",
+      "location": {
+        "x": 2200,
+        "y": 3000
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "A",
+      "location": {
+        "x": 1000,
+        "y": 3200
+      }
+    },
+    {
+      "regionName": "Elbow",
+      "superRegionName": "A",
+      "location": {
+        "x": 200,
+        "y": 4200
+      }
+    },
+    {
+      "regionName": "Alley",
+      "superRegionName": "A",
+      "location": {
+        "x": 3400,
+        "y": 3600
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Defender Side",
+      "location": {
+        "x": 3805.4785,
+        "y": -1989.0962
+      }
+    },
+    {
+      "regionName": "Top",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 2000,
+        "y": -2000
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Attacker Side",
+      "location": {
+        "x": -6025,
+        "y": -400
+      }
+    }
+  ]
+}

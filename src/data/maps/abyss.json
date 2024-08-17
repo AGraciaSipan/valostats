@@ -1,0 +1,197 @@
+{
+  "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
+  "displayName": "Abyss",
+  "displayIcon": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/displayicon.png",
+  "listViewIcon": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/listviewicon.png",
+  "splash": "https://media.valorant-api.com/maps/224b0a95-48b9-f703-1bd8-67aca101a61f/splash.png",
+  "xMultiplier": 8.1e-05,
+  "yMultiplier": -8.1e-05,
+  "xScalarToAdd": 0.5,
+  "yScalarToAdd": 0.5,
+  "callouts": [
+    {
+      "regionName": "Bridge",
+      "superRegionName": "A",
+      "location": {
+        "x": 5700,
+        "y": -375
+      }
+    },
+    {
+      "regionName": "Link",
+      "superRegionName": "A",
+      "location": {
+        "x": 2800,
+        "y": -2450
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "A",
+      "location": {
+        "x": 3250,
+        "y": 3400
+      }
+    },
+    {
+      "regionName": "Main",
+      "superRegionName": "A",
+      "location": {
+        "x": 3800,
+        "y": 1650
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "A",
+      "location": {
+        "x": 4300,
+        "y": -200
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Attacker Side",
+      "location": {
+        "x": 950,
+        "y": 4950
+      }
+    },
+    {
+      "regionName": "Tower",
+      "superRegionName": "A",
+      "location": {
+        "x": 3025,
+        "y": -125
+      }
+    },
+    {
+      "regionName": "Bend",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -1700,
+        "y": 1950
+      }
+    },
+    {
+      "regionName": "Link",
+      "superRegionName": "B",
+      "location": {
+        "x": -2000,
+        "y": -2350
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "B",
+      "location": {
+        "x": -3650,
+        "y": 4025
+      }
+    },
+    {
+      "regionName": "Main",
+      "superRegionName": "B",
+      "location": {
+        "x": -4450,
+        "y": 1525
+      }
+    },
+    {
+      "regionName": "Nest",
+      "superRegionName": "B",
+      "location": {
+        "x": -4975,
+        "y": 2150
+      }
+    },
+    {
+      "regionName": "Bottom",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -400,
+        "y": 575
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "B",
+      "location": {
+        "x": -4425,
+        "y": -1175
+      }
+    },
+    {
+      "regionName": "Catwalk",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 600,
+        "y": 525
+      }
+    },
+    {
+      "regionName": "Danger",
+      "superRegionName": "B",
+      "location": {
+        "x": -5850,
+        "y": 700
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Defender Side",
+      "location": {
+        "x": 950,
+        "y": -5275
+      }
+    },
+    {
+      "regionName": "Library",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -325,
+        "y": -600
+      }
+    },
+    {
+      "regionName": "Secret",
+      "superRegionName": "A",
+      "location": {
+        "x": 3775,
+        "y": -3850
+      }
+    },
+    {
+      "regionName": "Security",
+      "superRegionName": "A",
+      "location": {
+        "x": 4900,
+        "y": -2975
+      }
+    },
+    {
+      "regionName": "Top",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 775,
+        "y": -2375
+      }
+    },
+    {
+      "regionName": "Tower",
+      "superRegionName": "B",
+      "location": {
+        "x": -3925,
+        "y": -2500
+      }
+    },
+    {
+      "regionName": "Vent",
+      "superRegionName": "A",
+      "location": {
+        "x": 1700,
+        "y": -325
+      }
+    }
+  ]
+}

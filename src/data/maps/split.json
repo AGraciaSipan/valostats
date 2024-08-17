@@ -1,0 +1,205 @@
+{
+  "uuid": "d960549e-485c-e861-8d71-aa9d1aed12a2",
+  "displayName": "Split",
+  "displayIcon": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/displayicon.png",
+  "listViewIcon": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/listviewicon.png",
+  "splash": "https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png",
+  "xMultiplier": 7.8e-05,
+  "yMultiplier": -7.8e-05,
+  "xScalarToAdd": 0.842188,
+  "yScalarToAdd": 0.697578,
+  "callouts": [
+    {
+      "regionName": "Back",
+      "superRegionName": "A",
+      "location": {
+        "x": 7345.049,
+        "y": -7858.0405
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "A",
+      "location": {
+        "x": 6814.217,
+        "y": -2457.7468
+      }
+    },
+    {
+      "regionName": "Main",
+      "superRegionName": "A",
+      "location": {
+        "x": 6279.9795,
+        "y": -4492.833
+      }
+    },
+    {
+      "regionName": "Rafters",
+      "superRegionName": "A",
+      "location": {
+        "x": 5434.726,
+        "y": -6258.442
+      }
+    },
+    {
+      "regionName": "Ramps",
+      "superRegionName": "A",
+      "location": {
+        "x": 4330,
+        "y": -4750
+      }
+    },
+    {
+      "regionName": "Screens",
+      "superRegionName": "A",
+      "location": {
+        "x": 5648.7144,
+        "y": -8868.611
+      }
+    },
+    {
+      "regionName": "Sewer",
+      "superRegionName": "A",
+      "location": {
+        "x": 4862.6064,
+        "y": -2367.2578
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "A",
+      "location": {
+        "x": 6588.6597,
+        "y": -6761.131
+      }
+    },
+    {
+      "regionName": "Tower",
+      "superRegionName": "A",
+      "location": {
+        "x": 4636.7925,
+        "y": -6748.2334
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Attacker Side",
+      "location": {
+        "x": 1901.97,
+        "y": 59.588867
+      }
+    },
+    {
+      "regionName": "Alley",
+      "superRegionName": "B",
+      "location": {
+        "x": -1158.0048,
+        "y": -8066.301
+      }
+    },
+    {
+      "regionName": "Back",
+      "superRegionName": "B",
+      "location": {
+        "x": -3107.181,
+        "y": -7417.2607
+      }
+    },
+    {
+      "regionName": "Link",
+      "superRegionName": "B",
+      "location": {
+        "x": -27.670135,
+        "y": -2369.784
+      }
+    },
+    {
+      "regionName": "Garage",
+      "superRegionName": "B",
+      "location": {
+        "x": -2190.7827,
+        "y": -3848.0293
+      }
+    },
+    {
+      "regionName": "Rafters",
+      "superRegionName": "B",
+      "location": {
+        "x": -637.1397,
+        "y": -6070.6167
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "B",
+      "location": {
+        "x": -2167.2456,
+        "y": -6264.7715
+      }
+    },
+    {
+      "regionName": "Stairs",
+      "superRegionName": "B",
+      "location": {
+        "x": 1061.493,
+        "y": -6760.976
+      }
+    },
+    {
+      "regionName": "Tower",
+      "superRegionName": "B",
+      "location": {
+        "x": 168.89589,
+        "y": -5290.194
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "B",
+      "location": {
+        "x": -1271.6421,
+        "y": -1983.6248
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Defender Side",
+      "location": {
+        "x": 2142.3635,
+        "y": -8964.969
+      }
+    },
+    {
+      "regionName": "Bottom",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 1922.6552,
+        "y": -2899.4626
+      }
+    },
+    {
+      "regionName": "Mail",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 1155.3333,
+        "y": -4808.6436
+      }
+    },
+    {
+      "regionName": "Top",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 2021.9575,
+        "y": -4596.936
+      }
+    },
+    {
+      "regionName": "Vent",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 3155.1648,
+        "y": -5338.5215
+      }
+    }
+  ]
+}
