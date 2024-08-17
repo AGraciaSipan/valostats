@@ -1,0 +1,213 @@
+{
+  "uuid": "e2ad5c54-4114-a870-9641-8ea21279579a",
+  "displayName": "Icebox",
+  "displayIcon": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/displayicon.png",
+  "listViewIcon": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/listviewicon.png",
+  "splash": "https://media.valorant-api.com/maps/e2ad5c54-4114-a870-9641-8ea21279579a/splash.png",
+  "xMultiplier": 7.2e-05,
+  "yMultiplier": -7.2e-05,
+  "xScalarToAdd": 0.460214,
+  "yScalarToAdd": 0.304687,
+  "callouts": [
+    {
+      "regionName": "Garage",
+      "superRegionName": "B",
+      "location": {
+        "x": -1250,
+        "y": -1425
+      }
+    },
+    {
+      "regionName": "Belt",
+      "superRegionName": "A",
+      "location": {
+        "x": -7200,
+        "y": -850
+      }
+    },
+    {
+      "regionName": "Nest",
+      "superRegionName": "A",
+      "location": {
+        "x": -6650,
+        "y": 900
+      }
+    },
+    {
+      "regionName": "Pipes",
+      "superRegionName": "A",
+      "location": {
+        "x": -6150,
+        "y": 450
+      }
+    },
+    {
+      "regionName": "Rafters",
+      "superRegionName": "A",
+      "location": {
+        "x": -6450,
+        "y": 4250
+      }
+    },
+    {
+      "regionName": "Screen",
+      "superRegionName": "A",
+      "location": {
+        "x": -5100,
+        "y": 3325
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "A",
+      "location": {
+        "x": -6400,
+        "y": 3200
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Attacker Side",
+      "location": {
+        "x": -3925,
+        "y": -4450
+      }
+    },
+    {
+      "regionName": "Yellow",
+      "superRegionName": "B",
+      "location": {
+        "x": 2050,
+        "y": -25
+      }
+    },
+    {
+      "regionName": "Back",
+      "superRegionName": "B",
+      "location": {
+        "x": 251,
+        "y": 4269
+      }
+    },
+    {
+      "regionName": "Cubby",
+      "superRegionName": "B",
+      "location": {
+        "x": 1050,
+        "y": -975
+      }
+    },
+    {
+      "regionName": "Green",
+      "superRegionName": "B",
+      "location": {
+        "x": -450,
+        "y": -700
+      }
+    },
+    {
+      "regionName": "Hall",
+      "superRegionName": "B",
+      "location": {
+        "x": 300,
+        "y": 3050
+      }
+    },
+    {
+      "regionName": "Hut",
+      "superRegionName": "B",
+      "location": {
+        "x": -1425,
+        "y": 4400
+      }
+    },
+    {
+      "regionName": "Kitchen",
+      "superRegionName": "B",
+      "location": {
+        "x": -2221.3618,
+        "y": 3403.649
+      }
+    },
+    {
+      "regionName": "Orange",
+      "superRegionName": "B",
+      "location": {
+        "x": -632,
+        "y": 1700
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "B",
+      "location": {
+        "x": 1725,
+        "y": 2575
+      }
+    },
+    {
+      "regionName": "Snowman",
+      "superRegionName": "B",
+      "location": {
+        "x": 2250,
+        "y": 3960.3218
+      }
+    },
+    {
+      "regionName": "Snow Pile",
+      "superRegionName": "B",
+      "location": {
+        "x": -1775,
+        "y": 2500
+      }
+    },
+    {
+      "regionName": "Tube",
+      "superRegionName": "B",
+      "location": {
+        "x": -2300,
+        "y": 1275
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Defender Side",
+      "location": {
+        "x": -3750,
+        "y": 7075
+      }
+    },
+    {
+      "regionName": "Blue",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -2825,
+        "y": 975
+      }
+    },
+    {
+      "regionName": "Boiler",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -3375,
+        "y": 2925
+      }
+    },
+    {
+      "regionName": "Pallet",
+      "superRegionName": "Mid",
+      "location": {
+        "x": -4450,
+        "y": 1775
+      }
+    },
+    {
+      "regionName": "Fence",
+      "superRegionName": "B",
+      "location": {
+        "x": 363,
+        "y": 3595
+      }
+    }
+  ]
+}

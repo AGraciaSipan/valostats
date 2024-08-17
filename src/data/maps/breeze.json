@@ -1,0 +1,229 @@
+{
+  "uuid": "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+  "displayName": "Breeze",
+  "displayIcon": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/displayicon.png",
+  "listViewIcon": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/listviewicon.png",
+  "splash": "https://media.valorant-api.com/maps/2fb9a4fd-47b8-4e7d-a969-74b4046ebd53/splash.png",
+  "xMultiplier": 7e-05,
+  "yMultiplier": -7e-05,
+  "xScalarToAdd": 0.465123,
+  "yScalarToAdd": 0.833078,
+  "callouts": [
+    {
+      "regionName": "Hall",
+      "superRegionName": "A",
+      "location": {
+        "x": 4825,
+        "y": 2550
+      }
+    },
+    {
+      "regionName": "Bridge",
+      "superRegionName": "A",
+      "location": {
+        "x": 8400,
+        "y": 3525
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Defender Side",
+      "location": {
+        "x": 8900,
+        "y": 3525
+      }
+    },
+    {
+      "regionName": "Arches",
+      "superRegionName": "Defender Side",
+      "location": {
+        "x": 9400,
+        "y": -1300
+      }
+    },
+    {
+      "regionName": "Wood Doors",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 4825,
+        "y": 2550
+      }
+    },
+    {
+      "regionName": "Pillar",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 4175,
+        "y": 475
+      }
+    },
+    {
+      "regionName": "Top",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 6175,
+        "y": 525
+      }
+    },
+    {
+      "regionName": "Nest",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 8650,
+        "y": 275
+      }
+    },
+    {
+      "regionName": "Window",
+      "superRegionName": "B",
+      "location": {
+        "x": 2225,
+        "y": -4175
+      }
+    },
+    {
+      "regionName": "Main",
+      "superRegionName": "B",
+      "location": {
+        "x": 3550,
+        "y": -4450
+      }
+    },
+    {
+      "regionName": "Snake",
+      "superRegionName": "Attacker Side",
+      "location": {
+        "x": 550,
+        "y": -2450
+      }
+    },
+    {
+      "regionName": "Elbow",
+      "superRegionName": "B",
+      "location": {
+        "x": 4675,
+        "y": -2900
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "B",
+      "location": {
+        "x": 6450,
+        "y": -5650
+      }
+    },
+    {
+      "regionName": "Tunnel",
+      "superRegionName": "B",
+      "location": {
+        "x": 6450,
+        "y": -1450
+      }
+    },
+    {
+      "regionName": "Switch",
+      "superRegionName": "A",
+      "location": {
+        "x": 6425,
+        "y": 3050
+      }
+    },
+    {
+      "regionName": "Chute",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 3875,
+        "y": 1800
+      }
+    },
+    {
+      "regionName": "Back",
+      "superRegionName": "B",
+      "location": {
+        "x": 7550,
+        "y": -5675
+      }
+    },
+    {
+      "regionName": "Wall",
+      "superRegionName": "B",
+      "location": {
+        "x": 8550,
+        "y": -3000
+      }
+    },
+    {
+      "regionName": "Rope",
+      "superRegionName": "A",
+      "location": {
+        "x": 3100,
+        "y": 2550
+      }
+    },
+    {
+      "regionName": "Cannon",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 2900,
+        "y": -1850
+      }
+    },
+    {
+      "regionName": "Metal Doors",
+      "superRegionName": "A",
+      "location": {
+        "x": 6825,
+        "y": 2550
+      }
+    },
+    {
+      "regionName": "Bottom",
+      "superRegionName": "Mid",
+      "location": {
+        "x": 1575,
+        "y": 475
+      }
+    },
+    {
+      "regionName": "Lobby",
+      "superRegionName": "A",
+      "location": {
+        "x": -1250,
+        "y": 3400
+      }
+    },
+    {
+      "regionName": "Shop",
+      "superRegionName": "A",
+      "location": {
+        "x": 2150,
+        "y": 4250
+      }
+    },
+    {
+      "regionName": "Site",
+      "superRegionName": "A",
+      "location": {
+        "x": 4825,
+        "y": 6325
+      }
+    },
+    {
+      "regionName": "Pyramids",
+      "superRegionName": "A",
+      "location": {
+        "x": 5200,
+        "y": 5450
+      }
+    },
+    {
+      "regionName": "Spawn",
+      "superRegionName": "Attacker Side",
+      "location": {
+        "x": -575,
+        "y": -450
+      }
+    }
+  ]
+}
