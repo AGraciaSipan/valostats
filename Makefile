@@ -10,3 +10,8 @@ install:  ## Install dev-requirements and pre-commit
 	pre-commit install
 	pre-commit install --hook-type commit-msg
 	@echo "----Done----"
+
+download-data:  ## Downloads maps data from Valorant API
+	@echo "----Downloading maps data----"
+	python download_data.py
+	@echo "----Done----"
