@@ -63,9 +63,7 @@ class GameMap:
 
     @classmethod
     def from_dict(cls, map_metadata: dict[str, Any]) -> "GameMap":
-        callouts_data = map_metadata.get("callouts", [])
-        if callouts_data is None:
-            callouts_data = []
+        callouts_data = map_metadata.get("callouts", []) or []
         return cls(
             uuid=UUID(map_metadata["uuid"]),
             display_name=map_metadata["displayName"],
