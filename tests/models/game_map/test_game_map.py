@@ -4,22 +4,7 @@ from uuid import UUID
 
 import pytest
 
-from src.models.game_map import Callout, GameMap, Location
-
-
-@pytest.fixture()
-def location_data():
-    return {"x": 10.0, "y": 20.0}
-
-
-@pytest.fixture()
-def empty_location_data():
-    return {}
-
-
-@pytest.fixture()
-def callout_data(location_data):
-    return {"regionName": "Test Region", "superRegionName": "Test Super Region", "location": location_data}
+from src.models.game_map.game_map import GameMap
 
 
 @pytest.fixture()
@@ -63,53 +48,6 @@ def map_metadata_with_null_values(uuid):
         "y_scalar_to_add": None,
         "callouts": None,
     }
-
-
-def test_location_from_dict(location_data):
-    location = Location.from_dict(location_data)
-    assert location.x == location_data["x"]
-    assert location.y == location_data["y"]
-
-
-def test_location_from_empty_dict(empty_location_data):
-    location = Location.from_dict(empty_location_data)
-    assert location.x == 0.0
-    assert location.y == 0.0
-
-
-def test_location_to_dict(location_data):
-    location = Location.from_dict(location_data)
-    assert location.to_dict() == location_data
-
-
-def test_location_round_trip(location_data):
-    location = Location.from_dict(location_data)
-    location_dict = location.to_dict()
-    assert location == Location.from_dict(location_dict)
-
-
-def test_callout_from_dict_initialization(callout_data):
-    callout = Callout.from_dict(callout_data)
-    assert callout.region_name == callout_data["regionName"]
-    assert callout.super_region_name == callout_data["superRegionName"]
-    assert callout.location.x == callout_data["location"]["x"]
-    assert callout.location.y == callout_data["location"]["y"]
-
-
-def test_callout_instantiation_without_region_name_raises_keyerror(location_data):
-    with pytest.raises(KeyError):
-        Callout.from_dict({"superRegionName": "Test Super Region", "location": location_data})
-
-
-def test_callout_to_dict(callout_data):
-    callout = Callout.from_dict(callout_data)
-    assert callout.to_dict() == callout_data
-
-
-def test_callout_round_trip(callout_data):
-    callout = Callout.from_dict(callout_data)
-    callout_dict = callout.to_dict()
-    assert callout == Callout.from_dict(callout_dict)
 
 
 def test_map_from_dict_initialization(map_metadata):
