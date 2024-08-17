@@ -4,43 +4,7 @@ from enum import Enum
 from typing import Any
 from uuid import UUID
 
-
-@dataclass
-class Location:
-    DEFAULT_X = 0.0
-    DEFAULT_Y = 0.0
-
-    x: float = DEFAULT_X
-    y: float = DEFAULT_Y
-
-    @classmethod
-    def from_dict(cls, location_data: dict[str, float]) -> "Location":
-        return cls(x=location_data.get("x", cls.DEFAULT_X), y=location_data.get("y", cls.DEFAULT_Y))
-
-    def to_dict(self) -> dict[str, float]:
-        return {"x": self.x, "y": self.y}
-
-
-@dataclass
-class Callout:
-    region_name: str
-    super_region_name: str | None = None
-    location: Location = field(default_factory=Location)
-
-    @classmethod
-    def from_dict(cls, callout_data: dict[str, Any]) -> "Callout":
-        return cls(
-            region_name=callout_data["regionName"],
-            super_region_name=callout_data.get("superRegionName"),
-            location=Location.from_dict(callout_data.get("location", {})),
-        )
-
-    def to_dict(self) -> dict[str, Any]:
-        return {
-            "regionName": self.region_name,
-            "superRegionName": self.super_region_name,
-            "location": self.location.to_dict(),
-        }
+from src.models.game_map.callout import Callout
 
 
 @dataclass
