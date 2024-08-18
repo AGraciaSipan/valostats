@@ -20,3 +20,4 @@ class AbilitySlots(Enum):
     E_SLOT = "Ability2"
     C_SLOT = "Grenade"
     X_SLOT = "Ultimate"
+    _SLOT = "Passive"
