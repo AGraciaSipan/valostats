@@ -5,10 +5,11 @@ from typing import Any
 from uuid import UUID
 
 from src.models.game_map.callout import Callout
+from src.models.serializable import Serializable
 
 
 @dataclass
-class GameMap:
+class GameMap(Serializable):
     X_MULTIPLIER = 1.0
     Y_MULTIPLIER = 1.0
     X_SCALAR_TO_ADD = 0.0
@@ -60,10 +61,6 @@ class GameMap:
             "yScalarToAdd": self.y_scalar_to_add,
             "callouts": [callout.to_dict() for callout in self.callouts],
         }
-
-    def to_json(self, path: str) -> None:
-        with open(path, "w") as file:
-            json.dump(self.to_dict(), file, indent=2)
 
 
 class MapUUIDs(Enum):
