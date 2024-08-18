@@ -1,0 +1,28 @@
+{
+  "uuid": "1dbf2edd-4729-0984-3115-daa5eed44993",
+  "displayName": "Clove",
+  "displayIcon": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/1dbf2edd-4729-0984-3115-daa5eed44993/displayiconsmall.png",
+  "role": {
+    "uuid": "4ee40330-ecdd-4f2f-98a8-eb1243428373",
+    "displayName": "Controller"
+  },
+  "abilities": [
+    {
+      "slot": "Grenade",
+      "displayName": "Pick-me-up"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Ruse"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Not Dead Yet"
+    },
+    {
+      "slot": "Ability1",
+      "displayName": "Meddle"
+    }
+  ]
+}

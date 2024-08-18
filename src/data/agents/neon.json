@@ -1,0 +1,28 @@
+{
+  "uuid": "bb2a4828-46eb-8cd1-e765-15848195d751",
+  "displayName": "Neon",
+  "displayIcon": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayiconsmall.png",
+  "role": {
+    "uuid": "dbe8757e-9e92-4ed4-b39f-9dfc589691d4",
+    "displayName": "Duelist"
+  },
+  "abilities": [
+    {
+      "slot": "Ability2",
+      "displayName": "High Gear"
+    },
+    {
+      "slot": "Ability1",
+      "displayName": "Relay Bolt"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Fast Lane"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Overdrive"
+    }
+  ]
+}

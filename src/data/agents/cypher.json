@@ -1,0 +1,28 @@
+{
+  "uuid": "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
+  "displayName": "Cypher",
+  "displayIcon": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayiconsmall.png",
+  "role": {
+    "uuid": "5fc02f99-4091-4486-a531-98459a3e95e9",
+    "displayName": "Sentinel"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Cyber Cage"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Spycam"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Trapwire"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Neural Theft"
+    }
+  ]
+}

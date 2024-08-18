@@ -1,0 +1,28 @@
+{
+  "uuid": "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+  "displayName": "Reyna",
+  "displayIcon": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayiconsmall.png",
+  "role": {
+    "uuid": "dbe8757e-9e92-4ed4-b39f-9dfc589691d4",
+    "displayName": "Duelist"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Devour"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Dismiss"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Leer"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Empress"
+    }
+  ]
+}

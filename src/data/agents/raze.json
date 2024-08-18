@@ -1,0 +1,28 @@
+{
+  "uuid": "f94c3b30-42be-e959-889c-5aa313dba261",
+  "displayName": "Raze",
+  "displayIcon": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/displayiconsmall.png",
+  "role": {
+    "uuid": "dbe8757e-9e92-4ed4-b39f-9dfc589691d4",
+    "displayName": "Duelist"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Blast Pack"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Paint Shells"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Boom Bot"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Showstopper"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "569fdd95-4d10-43ab-ca70-79becc718b46",
+  "displayName": "Sage",
+  "displayIcon": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayiconsmall.png",
+  "role": {
+    "uuid": "5fc02f99-4091-4486-a531-98459a3e95e9",
+    "displayName": "Sentinel"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Slow Orb"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Healing Orb"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Barrier Orb"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Resurrection"
+    }
+  ]
+}

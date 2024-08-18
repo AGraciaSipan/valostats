@@ -1,0 +1,32 @@
+{
+  "uuid": "add6443a-41bd-e414-f6ad-e58d267f4e95",
+  "displayName": "Jett",
+  "displayIcon": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayiconsmall.png",
+  "role": {
+    "uuid": "dbe8757e-9e92-4ed4-b39f-9dfc589691d4",
+    "displayName": "Duelist"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Updraft"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Tailwind"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Cloudburst"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Blade Storm"
+    },
+    {
+      "slot": "Passive",
+      "displayName": "Drift"
+    }
+  ]
+}
