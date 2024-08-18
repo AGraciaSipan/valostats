@@ -22,7 +22,7 @@ class Agent(Serializable):
     def from_dict(cls, agent_data: dict[str, Any]) -> "Agent":
         return cls(
             uuid=UUID(agent_data["uuid"]),
-            name=agent_data["displayName"],
+            name=agent_data["displayName"].replace("/", ""),
             display_icon=agent_data["displayIcon"],
             display_icon_small=agent_data["displayIconSmall"],
             role=Role.from_dict(agent_data["role"]),

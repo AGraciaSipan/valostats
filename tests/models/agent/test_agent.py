@@ -23,7 +23,7 @@ def agent_data(uuid, role_data, ability_data):
 
     return {
         "uuid": str(uuid),
-        "displayName": "Test Agent",
+        "displayName": "Test/Agent",
         "displayIcon": "icon.png",
         "displayIconSmall": "small_icon.png",
         "role": role_data,
@@ -34,7 +34,7 @@ def agent_data(uuid, role_data, ability_data):
 def test_agent_from_dict(agent_data):
     agent = Agent.from_dict(agent_data)
     assert agent.uuid == UUID(agent_data["uuid"])
-    assert agent.name == agent_data["displayName"]
+    assert agent.name == agent_data["displayName"].replace("/", "")
     assert agent.display_icon == agent_data["displayIcon"]
     assert agent.display_icon_small == agent_data["displayIconSmall"]
     assert agent.role.uuid == UUID(agent_data["role"]["uuid"])
