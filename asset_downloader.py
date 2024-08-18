@@ -3,6 +3,7 @@ from logging import INFO, basicConfig, getLogger
 
 import requests
 
+from src.models.agent.agent import Agent, AgentUUIDs
 from src.models.game_map.game_map import GameMap, MapUUIDs
 from valorant_client.client import ValorantClient
 
@@ -11,6 +12,9 @@ logger = getLogger(__name__)
 
 
 class AssetDownloader:
+    DEFAULT_MAP_ASSET_TYPES = ["display_icon", "list_view_icon", "splash"]
+    DEFAULT_AGENT_ASSET_TYPES = ["display_icon", "display_icon_small"]
+
     def __init__(self, base_directory: str):
         self.base_directory = base_directory
 
@@ -28,24 +32,41 @@ class AssetDownloader:
             logger.exception(f"Error downloading asset: {e}")
             raise
 
-    def save_map_assets(self, game_map: GameMap, asset_types: list[str] | None = None) -> None:
-        if asset_types is None:
-            asset_types = ["display_icon", "list_view_icon", "splash"]
-
-        assets = {
-            "display_icon": game_map.display_icon,
-            "list_view_icon": game_map.list_view_icon,
-            "splash": game_map.splash,
-        }
+    def _save_assets(self, obj: GameMap | Agent, asset_types: list[str]) -> None:
+        if isinstance(obj, GameMap):
+            assets = {
+                "display_icon": obj.display_icon,
+                "list_view_icon": obj.list_view_icon,
+                "splash": obj.splash,
+            }
+            directory = os.path.join(self.base_directory, "maps", obj.display_name.lower())
+        elif isinstance(obj, Agent):
+            assets = {
+                "display_icon": obj.display_icon,
+                "display_icon_small": obj.display_icon_small,
+            }
+            directory = os.path.join(self.base_directory, "agents", obj.name.lower())
+        else:
+            raise TypeError("Unsupported object type for asset downloading")
 
         for asset_name in asset_types:
             url = assets.get(asset_name)
             if url:
                 filename = f"{asset_name}.png"
-                path = os.path.join(self.base_directory, "maps", game_map.display_name.lower(), filename)
+                path = os.path.join(directory, filename)
                 self._download_asset(url, path)
             else:
-                logger.warning(f"No URL found for asset type: {asset_name}")
+                logger.warning(f"No URL found for asset type: {asset_name} in {type(obj).__name__}")
+
+    def save_map_assets(self, game_map: GameMap, asset_types: list[str] | None = None) -> None:
+        if asset_types is None:
+            asset_types = self.DEFAULT_MAP_ASSET_TYPES
+        self._save_assets(game_map, asset_types)
+
+    def save_agent_assets(self, agent: Agent, asset_types: list[str] | None = None) -> None:
+        if asset_types is None:
+            asset_types = self.DEFAULT_AGENT_ASSET_TYPES
+        self._save_assets(agent, asset_types)
 
 
 if __name__ == "__main__":
@@ -53,6 +74,19 @@ if __name__ == "__main__":
     asset_manager = AssetDownloader(base_directory=os.path.join("src", "assets"))
 
     for map_uuid in MapUUIDs:
-        map_data = client.get_map_by_uuid(map_uuid.value)
-        game_map = GameMap.from_dict(map_data.get("data", {}))
-        asset_manager.save_map_assets(game_map, ["display_icon"])
+        map_name = map_uuid.name.lower()
+        try:
+            map_data = client.get_map_by_uuid(map_uuid.value)
+            game_map = GameMap.from_dict(map_data.get("data", {}))
+            asset_manager.save_map_assets(game_map, ["display_icon"])
+        except Exception as e:
+            logger.exception(f"Error downloading data for {map_name}: {e}")
+
+    for agent_uuid in AgentUUIDs:
+        agent_name = agent_uuid.name.lower()
+        try:
+            agent_data = client.get_agent_by_uuid(agent_uuid.value)
+            agent = Agent.from_dict(agent_data.get("data", {}))
+            asset_manager.save_agent_assets(agent, ["display_icon_small"])
+        except Exception as e:
+            logger.exception(f"Error downloading data for {agent_name}: {e}")

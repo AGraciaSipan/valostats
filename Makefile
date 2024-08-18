@@ -16,7 +16,7 @@ download-data:  ## Downloads maps data from Valorant API
 	python download_data.py
 	@echo "----Done----"
 
-download-assets:  ## Downloads map assets from Valorant API
+download-assets:  ## Downloads agent and map assets from Valorant API
 	@echo "----Downloading map assets----"
 	python asset_downloader.py
 	@echo "----Done----"
