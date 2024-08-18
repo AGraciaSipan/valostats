@@ -1,0 +1,28 @@
+{
+  "uuid": "1e58de9c-4950-5125-93e9-a0aee9f98746",
+  "displayName": "Killjoy",
+  "displayIcon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayiconsmall.png",
+  "role": {
+    "uuid": "5fc02f99-4091-4486-a531-98459a3e95e9",
+    "displayName": "Sentinel"
+  },
+  "abilities": [
+    {
+      "slot": "Grenade",
+      "displayName": "Nanoswarm"
+    },
+    {
+      "slot": "Ability1",
+      "displayName": "ALARMBOT"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "TURRET"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Lockdown"
+    }
+  ]
+}

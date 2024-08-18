@@ -1,0 +1,32 @@
+{
+  "uuid": "707eab51-4836-f488-046a-cda6bf494859",
+  "displayName": "Viper",
+  "displayIcon": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/displayiconsmall.png",
+  "role": {
+    "uuid": "4ee40330-ecdd-4f2f-98a8-eb1243428373",
+    "displayName": "Controller"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Poison Cloud"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Toxic Screen"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Snake Bite"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Viper's Pit"
+    },
+    {
+      "slot": "Passive",
+      "displayName": "Toxic"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "cc8b64c8-4b25-4ff9-6e7f-37b4da43d235",
+  "displayName": "Deadlock",
+  "displayIcon": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayiconsmall.png",
+  "role": {
+    "uuid": "5fc02f99-4091-4486-a531-98459a3e95e9",
+    "displayName": "Sentinel"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Sonic Sensor"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Barrier Mesh"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "GravNet"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Annihilation"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
+  "displayName": "Astra",
+  "displayIcon": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/displayiconsmall.png",
+  "role": {
+    "uuid": "4ee40330-ecdd-4f2f-98a8-eb1243428373",
+    "displayName": "Controller"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Nova Pulse"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Nebula  / Dissipate"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Gravity Well"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Astral Form / Cosmic Divide"
+    },
+    {
+      "slot": "Passive",
+      "displayName": "Astral Form"
+    }
+  ]
+}

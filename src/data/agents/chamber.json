@@ -1,0 +1,28 @@
+{
+  "uuid": "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",
+  "displayName": "Chamber",
+  "displayIcon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayiconsmall.png",
+  "role": {
+    "uuid": "5fc02f99-4091-4486-a531-98459a3e95e9",
+    "displayName": "Sentinel"
+  },
+  "abilities": [
+    {
+      "slot": "Ability2",
+      "displayName": "Rendezvous"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Trademark"
+    },
+    {
+      "slot": "Ability1",
+      "displayName": "Headhunter"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Tour De Force"
+    }
+  ]
+}

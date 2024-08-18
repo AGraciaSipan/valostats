@@ -1,0 +1,28 @@
+{
+  "uuid": "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+  "displayName": "Yoru",
+  "displayIcon": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayiconsmall.png",
+  "role": {
+    "uuid": "dbe8757e-9e92-4ed4-b39f-9dfc589691d4",
+    "displayName": "Duelist"
+  },
+  "abilities": [
+    {
+      "slot": "Grenade",
+      "displayName": "FAKEOUT"
+    },
+    {
+      "slot": "Ability1",
+      "displayName": "BLINDSIDE"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "GATECRASH"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "DIMENSIONAL DRIFT"
+    }
+  ]
+}

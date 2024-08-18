@@ -1,0 +1,28 @@
+{
+  "uuid": "0e38b510-41a8-5780-5e8f-568b2a4f2d6c",
+  "displayName": "Iso",
+  "displayIcon": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/0e38b510-41a8-5780-5e8f-568b2a4f2d6c/displayiconsmall.png",
+  "role": {
+    "uuid": "dbe8757e-9e92-4ed4-b39f-9dfc589691d4",
+    "displayName": "Duelist"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Undercut"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Kill Contract"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Double Tap"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Contingency"
+    }
+  ]
+}

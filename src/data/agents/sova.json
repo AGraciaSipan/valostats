@@ -1,0 +1,32 @@
+{
+  "uuid": "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
+  "displayName": "Sova",
+  "displayIcon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png",
+  "displayIconSmall": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayiconsmall.png",
+  "role": {
+    "uuid": "1b47567f-8f7b-444b-aae3-b0c634622d10",
+    "displayName": "Initiator"
+  },
+  "abilities": [
+    {
+      "slot": "Ability1",
+      "displayName": "Shock Bolt"
+    },
+    {
+      "slot": "Ability2",
+      "displayName": "Recon Bolt"
+    },
+    {
+      "slot": "Grenade",
+      "displayName": "Owl Drone"
+    },
+    {
+      "slot": "Ultimate",
+      "displayName": "Hunter's Fury"
+    },
+    {
+      "slot": "Passive",
+      "displayName": "Uncanny Marksman"
+    }
+  ]
+}
