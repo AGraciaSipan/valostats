@@ -6,6 +6,7 @@ import pytest
 
 from src.models.agent.ability import AbilitySlot
 from src.models.agent.agent import Agent
+from src.models.agent.role import RoleUUID
 from tests.models.agent.test_ability import ALL_ABILITIES
 
 
@@ -32,7 +33,7 @@ def test_agent_from_dict(agent_data):
     assert agent.name == agent_data["displayName"].replace("/", "")
     assert agent.display_icon == agent_data["displayIcon"]
     assert agent.display_icon_small == agent_data["displayIconSmall"]
-    assert agent.role.uuid == UUID(agent_data["role"]["uuid"])
+    assert agent.role.uuid == RoleUUID(agent_data["role"]["uuid"])
     assert agent.role.name == agent_data["role"]["displayName"]
     assert len(agent.abilities) == len(agent_data["abilities"])
     assert agent.abilities[0].slot == AbilitySlot(agent_data["abilities"][0]["slot"])
