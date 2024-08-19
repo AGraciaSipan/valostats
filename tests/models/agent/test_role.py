@@ -1,3 +1,5 @@
+from uuid import UUID
+
 import pytest
 
 from src.models.agent.role import Role, RoleUUID
@@ -6,6 +8,15 @@ from src.models.agent.role import Role, RoleUUID
 @pytest.fixture()
 def invalid_role_data(uuid):
     return {"uuid": str(uuid), "displayName": "Test Role"}
+
+
+def test_role_uuids():
+    for role in RoleUUID:
+        try:
+            uuid_obj = UUID(role.value)
+            assert uuid_obj.hex == role.value.replace("-", ""), f"UUID mismatch for {role.name}"
+        except ValueError:
+            pytest.fail(f"Invalid UUID format for {role.name}: {role.value}")
 
 
 def test_invalid_role_uuid(invalid_role_data):
