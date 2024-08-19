@@ -35,7 +35,7 @@ def test_ability_from_dict(ability_data):
 
 def test_ability_to_dict(ability_data):
     ability = Ability.from_dict(ability_data)
-    assert ability.to_dict() == {"slot": ability_data["slot"], "displayName": ability_data["displayName"]}
+    assert ability.to_dict() == {"slot": ability.slot.value, "displayName": ability.name}
 
 
 def test_ability_round_trip(ability_data):
