@@ -2,9 +2,17 @@ from dataclasses import dataclass
 from enum import Enum
 
 
+class AbilitySlot(Enum):
+    Q_SLOT = "Ability1"
+    E_SLOT = "Ability2"
+    C_SLOT = "Grenade"
+    X_SLOT = "Ultimate"
+    _SLOT = "Passive"
+
+
 @dataclass
 class Ability:
-    slot: "AbilitySlot"
+    slot: AbilitySlot
     name: str
 
     @classmethod
@@ -13,11 +21,3 @@ class Ability:
 
     def to_dict(self) -> dict[str, str]:
         return {"slot": self.slot.value, "displayName": self.name}
-
-
-class AbilitySlot(Enum):
-    Q_SLOT = "Ability1"
-    E_SLOT = "Ability2"
-    C_SLOT = "Grenade"
-    X_SLOT = "Ultimate"
-    _SLOT = "Passive"
