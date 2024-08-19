@@ -37,7 +37,7 @@ def test_invalid_role_uuid(invalid_role_data):
     assert str(excinfo.value) == f"'{invalid_role_data['uuid']}' is not a valid RoleUUID"
 
 
-def test_role_from_dict(uuid, role_data):
+def test_role_from_dict(role_data):
     role = Role.from_dict(role_data)
     assert role.uuid == RoleUUID(role_data["uuid"])
     assert role.name == role_data["displayName"]

@@ -22,7 +22,7 @@ def one_role_data():
 
 
 @pytest.fixture()
-def agent_data(uuid, one_role_data, all_ability_data):
+def agent_data(one_role_data, all_ability_data):
     return {
         "uuid": "601dbbe7-43ce-be57-2a40-4abd24953621",
         "displayName": "Test/Agent",
@@ -48,6 +48,12 @@ def test_agent_uuids():
             assert uuid_obj.hex == agent.value.replace("-", ""), f"UUID mismatch for {agent.name}"
         except ValueError:
             pytest.fail(f"Invalid UUID format for {agent.name}: {agent.value}")
+
+
+def test_invalid_agent_uuid(invalid_agent_data):
+    with pytest.raises(ValueError) as excinfo:
+        Agent.from_dict(invalid_agent_data)
+    assert str(excinfo.value) == f"'{invalid_agent_data['uuid']}' is not a valid AgentUUID"
 
 
 def test_agent_from_dict(agent_data):
