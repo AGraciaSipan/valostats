@@ -4,30 +4,25 @@ from uuid import UUID
 
 import pytest
 
+from src.models.agent.ability import AbilitySlot
 from src.models.agent.agent import Agent
+from tests.models.agent.test_ability import ALL_ABILITIES
 
 
 @pytest.fixture()
-def agent_data(uuid, role_data, ability_data):
-    first_ability = ability_data.copy()
-    first_ability["slot"] = "Q_SLOT"
+def all_ability_data():
+    return ALL_ABILITIES
 
-    second_ability = ability_data.copy()
-    second_ability["slot"] = "E_SLOT"
 
-    third_ability = ability_data.copy()
-    third_ability["slot"] = "C_SLOT"
-
-    fourth_ability = ability_data.copy()
-    fourth_ability["slot"] = "X_SLOT"
-
+@pytest.fixture()
+def agent_data(uuid, role_data, all_ability_data):
     return {
         "uuid": str(uuid),
         "displayName": "Test/Agent",
         "displayIcon": "icon.png",
         "displayIconSmall": "small_icon.png",
         "role": role_data,
-        "abilities": [first_ability, second_ability, third_ability, fourth_ability],
+        "abilities": all_ability_data,
     }
 
 
@@ -39,14 +34,14 @@ def test_agent_from_dict(agent_data):
     assert agent.display_icon_small == agent_data["displayIconSmall"]
     assert agent.role.uuid == UUID(agent_data["role"]["uuid"])
     assert agent.role.name == agent_data["role"]["displayName"]
-    assert len(agent.abilities) == 4
-    assert agent.abilities[0].slot == agent_data["abilities"][0]["slot"]
+    assert len(agent.abilities) == len(agent_data["abilities"])
+    assert agent.abilities[0].slot == AbilitySlot(agent_data["abilities"][0]["slot"])
     assert agent.abilities[0].name == agent_data["abilities"][0]["displayName"]
-    assert agent.abilities[1].slot == agent_data["abilities"][1]["slot"]
+    assert agent.abilities[1].slot == AbilitySlot(agent_data["abilities"][1]["slot"])
     assert agent.abilities[1].name == agent_data["abilities"][1]["displayName"]
-    assert agent.abilities[2].slot == agent_data["abilities"][2]["slot"]
+    assert agent.abilities[2].slot == AbilitySlot(agent_data["abilities"][2]["slot"])
     assert agent.abilities[2].name == agent_data["abilities"][2]["displayName"]
-    assert agent.abilities[3].slot == agent_data["abilities"][3]["slot"]
+    assert agent.abilities[3].slot == AbilitySlot(agent_data["abilities"][3]["slot"])
     assert agent.abilities[3].name == agent_data["abilities"][3]["displayName"]
 
 
