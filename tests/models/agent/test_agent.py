@@ -5,9 +5,10 @@ from uuid import UUID
 import pytest
 
 from src.models.agent.ability import AbilitySlot
-from src.models.agent.agent import Agent
+from src.models.agent.agent import Agent, AgentUUID
 from src.models.agent.role import RoleUUID
 from tests.models.agent.test_ability import ALL_ABILITIES
+from tests.models.agent.test_role import ALL_ROLES
 
 
 @pytest.fixture()
@@ -16,20 +17,42 @@ def all_ability_data():
 
 
 @pytest.fixture()
-def agent_data(uuid, role_data, all_ability_data):
+def one_role_data():
+    return ALL_ROLES[0]
+
+
+@pytest.fixture()
+def agent_data(uuid, one_role_data, all_ability_data):
     return {
-        "uuid": str(uuid),
+        "uuid": "601dbbe7-43ce-be57-2a40-4abd24953621",
         "displayName": "Test/Agent",
         "displayIcon": "icon.png",
         "displayIconSmall": "small_icon.png",
-        "role": role_data,
+        "role": one_role_data,
         "abilities": all_ability_data,
     }
 
 
+@pytest.fixture()
+def invalid_agent_data(uuid, agent_data):
+    invalid_data = agent_data.copy()
+    invalid_data["uuid"] = str(uuid)
+
+    return invalid_data
+
+
+def test_agent_uuids():
+    for agent in AgentUUID:
+        try:
+            uuid_obj = UUID(agent.value)
+            assert uuid_obj.hex == agent.value.replace("-", ""), f"UUID mismatch for {agent.name}"
+        except ValueError:
+            pytest.fail(f"Invalid UUID format for {agent.name}: {agent.value}")
+
+
 def test_agent_from_dict(agent_data):
     agent = Agent.from_dict(agent_data)
-    assert agent.uuid == UUID(agent_data["uuid"])
+    assert agent.uuid == AgentUUID(agent_data["uuid"])
     assert agent.name == agent_data["displayName"].replace("/", "")
     assert agent.display_icon == agent_data["displayIcon"]
     assert agent.display_icon_small == agent_data["displayIconSmall"]
@@ -49,7 +72,7 @@ def test_agent_from_dict(agent_data):
 def test_agent_to_dict(agent_data):
     agent = Agent.from_dict(agent_data)
     assert agent.to_dict() == {
-        "uuid": str(agent.uuid),
+        "uuid": agent.uuid.value,
         "displayName": agent.name,
         "displayIcon": agent.display_icon,
         "displayIconSmall": agent.display_icon_small,

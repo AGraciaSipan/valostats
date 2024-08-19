@@ -1,7 +1,7 @@
 import os
 from logging import INFO, basicConfig, getLogger
 
-from src.models.agent.agent import Agent, AgentUUIDs
+from src.models.agent.agent import Agent, AgentUUID
 from src.models.game_map.game_map import GameMap, MapUUIDs
 from valorant_client.client import ValorantClient
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         except Exception as e:
             logger.exception(f"Error downloading data for {map_name}: {e}")
 
-    for agent_uuid in AgentUUIDs:
+    for agent_uuid in AgentUUID:
         agent_name = agent_uuid.name.lower()
         logger.info(f"Downloading data for {agent_name}")
         try:
