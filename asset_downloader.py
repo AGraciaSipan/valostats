@@ -1,10 +1,11 @@
 import os
 from logging import INFO, basicConfig, getLogger
+from uuid import UUID
 
 import requests
 
 from src.models.agent.agent import Agent, AgentUUID
-from src.models.game_map.game_map import GameMap, MapUUIDs
+from src.models.game_map.game_map import GameMap, MapUUID
 from valorant_client.client import ValorantClient
 
 basicConfig(level=INFO)
@@ -39,7 +40,7 @@ class AssetDownloader:
                 "list_view_icon": obj.list_view_icon,
                 "splash": obj.splash,
             }
-            directory = os.path.join(self.base_directory, "maps", obj.display_name.lower())
+            directory = os.path.join(self.base_directory, "maps", obj.name.lower())
         elif isinstance(obj, Agent):
             assets = {
                 "display_icon": obj.display_icon,
@@ -73,10 +74,10 @@ if __name__ == "__main__":
     client = ValorantClient()
     asset_manager = AssetDownloader(base_directory=os.path.join("src", "assets"))
 
-    for map_uuid in MapUUIDs:
+    for map_uuid in MapUUID:
         map_name = map_uuid.name.lower()
         try:
-            map_data = client.get_map_by_uuid(map_uuid.value)
+            map_data = client.get_map_by_uuid(UUID(map_uuid.value))
             game_map = GameMap.from_dict(map_data.get("data", {}))
             asset_manager.save_map_assets(game_map, ["display_icon"])
         except Exception as e:
@@ -85,7 +86,7 @@ if __name__ == "__main__":
     for agent_uuid in AgentUUID:
         agent_name = agent_uuid.name.lower()
         try:
-            agent_data = client.get_agent_by_uuid(agent_uuid.value)
+            agent_data = client.get_agent_by_uuid(UUID(agent_uuid.value))
             agent = Agent.from_dict(agent_data.get("data", {}))
             asset_manager.save_agent_assets(agent, ["display_icon_small"])
         except Exception as e:

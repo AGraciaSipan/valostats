@@ -4,11 +4,11 @@ from uuid import UUID
 
 import pytest
 
-from src.models.game_map.game_map import GameMap
+from src.models.game_map.game_map import GameMap, MapUUID
 
 
 @pytest.fixture()
-def map_metadata(uuid, callout_data):
+def map_metadata(callout_data):
     first_callout = callout_data.copy()
     first_callout["location"] = callout_data["location"].copy()
 
@@ -16,7 +16,7 @@ def map_metadata(uuid, callout_data):
     second_callout["location"] = {"x": callout_data["location"]["x"] + 1, "y": callout_data["location"]["y"] + 1}
 
     return {
-        "uuid": str(uuid),
+        "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
         "displayName": "Test Map",
         "displayIcon": "icon.png",
         "listViewIcon": "list_icon.png",
@@ -30,14 +30,22 @@ def map_metadata(uuid, callout_data):
 
 
 @pytest.fixture()
-def empty_map_metadata(uuid):
-    return {"uuid": str(uuid), "displayName": "Test Map", "displayIcon": "icon.png"}
+def invalid_map_data(uuid, map_metadata):
+    invalid_data = map_metadata.copy()
+    invalid_data["uuid"] = str(uuid)
+
+    return invalid_data
 
 
 @pytest.fixture()
-def map_metadata_with_null_values(uuid):
+def empty_map_metadata():
+    return {"uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f", "displayName": "Test Map", "displayIcon": "icon.png"}
+
+
+@pytest.fixture()
+def map_metadata_with_null_values():
     return {
-        "uuid": str(uuid),
+        "uuid": "224b0a95-48b9-f703-1bd8-67aca101a61f",
         "displayName": "Test Map",
         "displayIcon": "icon.png",
         "list_view_icon": None,
@@ -50,10 +58,25 @@ def map_metadata_with_null_values(uuid):
     }
 
 
+def test_map_uuids():
+    for map_uuid in MapUUID:
+        try:
+            uuid_obj = UUID(map_uuid.value)
+            assert uuid_obj.hex == map_uuid.value.replace("-", ""), f"UUID mismatch for {map_uuid.name}"
+        except ValueError:
+            pytest.fail(f"Invalid UUID format for {map_uuid.name}: {map_uuid.value}")
+
+
+def test_invalid_map_uuid(invalid_map_data):
+    with pytest.raises(ValueError) as excinfo:
+        GameMap.from_dict(invalid_map_data)
+    assert str(excinfo.value) == f"'{invalid_map_data['uuid']}' is not a valid MapUUID"
+
+
 def test_map_from_dict_initialization(map_metadata):
     game_map = GameMap.from_dict(map_metadata)
-    assert game_map.uuid == UUID(map_metadata["uuid"])
-    assert game_map.display_name == map_metadata["displayName"]
+    assert game_map.uuid == MapUUID(map_metadata["uuid"])
+    assert game_map.name == map_metadata["displayName"]
     assert game_map.display_icon == map_metadata["displayIcon"]
     assert game_map.list_view_icon == map_metadata["listViewIcon"]
     assert game_map.splash == map_metadata["splash"]
@@ -68,8 +91,8 @@ def test_map_from_dict_initialization(map_metadata):
 
 def test_map_from_dict_initialization_with_empty_values(empty_map_metadata):
     game_map = GameMap.from_dict(empty_map_metadata)
-    assert game_map.uuid == UUID(empty_map_metadata["uuid"])
-    assert game_map.display_name == empty_map_metadata["displayName"]
+    assert game_map.uuid == MapUUID(empty_map_metadata["uuid"])
+    assert game_map.name == empty_map_metadata["displayName"]
     assert game_map.display_icon == "icon.png"
     assert game_map.list_view_icon is None
     assert game_map.splash is None
@@ -82,8 +105,8 @@ def test_map_from_dict_initialization_with_empty_values(empty_map_metadata):
 
 def test_map_from_dict_initialization_with_null_values(map_metadata_with_null_values):
     game_map = GameMap.from_dict(map_metadata_with_null_values)
-    assert game_map.uuid == UUID(map_metadata_with_null_values["uuid"])
-    assert game_map.display_name == map_metadata_with_null_values["displayName"]
+    assert game_map.uuid == MapUUID(map_metadata_with_null_values["uuid"])
+    assert game_map.name == map_metadata_with_null_values["displayName"]
     assert game_map.display_icon == map_metadata_with_null_values["displayIcon"]
     assert game_map.list_view_icon is None
     assert game_map.splash is None
