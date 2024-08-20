@@ -6,6 +6,8 @@ help: ## Displays makefile commands
 install:  ## Install dev-requirements and pre-commit
 	@echo "----Installing Developer Requirements----"
 	pip install -r dev-requirements.txt
+	@echo "----Installing Requirements----"
+	pip install -r src/requirements.txt
 	@echo "----Installing Commit Hooks----"
 	pre-commit install
 	pre-commit install --hook-type commit-msg
