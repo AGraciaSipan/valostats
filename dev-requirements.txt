@@ -3,5 +3,4 @@ pandas-stubs==2.2.2.*
 pre-commit==3.8.0
 pytest==8.3.2
 requests==2.32.3
-types-Pillow==10.2.0.*
 types-requests==2.32.0.*
