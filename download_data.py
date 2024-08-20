@@ -1,8 +1,9 @@
 import os
 from logging import INFO, basicConfig, getLogger
+from uuid import UUID
 
-from src.models.agent.agent import Agent, AgentUUIDs
-from src.models.game_map.game_map import GameMap, MapUUIDs
+from src.models.agent.agent import Agent, AgentUUID
+from src.models.game_map.game_map import GameMap, MapUUID
 from valorant_client.client import ValorantClient
 
 basicConfig(level=INFO)
@@ -13,11 +14,11 @@ if __name__ == "__main__":
     client = ValorantClient()
     base_directory = os.path.join("src", "data")
 
-    for map_uuid in MapUUIDs:
+    for map_uuid in MapUUID:
         map_name = map_uuid.name.lower()
         logger.info(f"Downloading data for {map_name}")
         try:
-            map_data = client.get_map_by_uuid(map_uuid.value)
+            map_data = client.get_map_by_uuid(UUID(map_uuid.value))
             game_map = GameMap.from_dict(map_data.get("data", {}))
             file_name = f"{map_name}.json"
             path = os.path.join(base_directory, "maps", file_name)
@@ -27,11 +28,11 @@ if __name__ == "__main__":
         except Exception as e:
             logger.exception(f"Error downloading data for {map_name}: {e}")
 
-    for agent_uuid in AgentUUIDs:
+    for agent_uuid in AgentUUID:
         agent_name = agent_uuid.name.lower()
         logger.info(f"Downloading data for {agent_name}")
         try:
-            agent_data = client.get_agent_by_uuid(agent_uuid.value)
+            agent_data = client.get_agent_by_uuid(UUID(agent_uuid.value))
             agent = Agent.from_dict(agent_data.get("data", {}))
             file_name = f"{agent_name}.json"
             path = os.path.join(base_directory, "agents", file_name)
