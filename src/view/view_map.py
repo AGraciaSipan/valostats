@@ -1,3 +1,4 @@
+import json
 import os
 
 import matplotlib.pyplot as plt
@@ -82,3 +83,65 @@ class ViewMap:
 
         # Display the animation
         plt.show()
+
+    def show_map_with_polygons(self):
+        fig, ax = plt.subplots(figsize=(10, 10))
+        ax.imshow(self.map_img, extent=[0, self.map_img.width, self.map_img.height, 0])
+
+        players = [ax.plot([], [], "o", markersize=8, label=f"Player {i+1}")[0] for i in range(10)]
+
+        # Plot each region as a polygon
+
+        json_file_path = os.path.join(self.base_dir, "..", "data", "polygons", f"{self.map_name}.json")
+        with open(json_file_path) as file:
+            json_data = json.load(file)
+
+        for polygons in json_data["polygons"]:
+            region_name = polygons["regionName"] + polygons["superRegionName"]
+            x_coords = polygons["location"]["x"]
+            y_coords = polygons["location"]["y"]
+
+            # Convert coordinates
+            x_img_coords = [x * self.map_img.width for x in x_coords]
+            y_img_coords = [(1 - y) * self.map_img.height for y in y_coords]  # Flip y-axis
+
+            # Plot the polygon
+            ax.fill(x_img_coords, y_img_coords, color="blue", alpha=0.3)
+
+            # Calculate centroid for labeling
+            centroid_x = sum(x_coords) / len(x_coords)
+            centroid_y = sum([1 - y for y in y_coords]) / len(y_coords)
+            ax.text(
+                centroid_x * self.map_img.width,
+                centroid_y * self.map_img.height,
+                region_name,
+                fontsize=10,
+                color="yellow",
+                ha="center",
+                va="center",
+            )
+
+        _ = FuncAnimation(
+            fig,
+            self.update,
+            fargs=(players, self.selected_map, ax),
+            frames=len(self.current_game),
+            interval=5,
+            blit=False,
+        )
+
+        # Customize the plot
+        ax.set_xlim(0, self.map_img.width)
+        ax.set_ylim(self.map_img.height, 0)
+        ax.legend(loc="upper right")
+
+        # Display the animation
+        plt.show()
+
+
+if __name__ == "__main__":
+    map_name = "haven"
+    csv_file_path = "prueba.csv"
+
+    view_map = ViewMap(map_name, csv_file_path)
+    view_map.show_map_with_polygons()
