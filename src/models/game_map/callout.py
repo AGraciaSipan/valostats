@@ -15,7 +15,7 @@ class Callout:
         return cls(
             region_name=callout_data["regionName"],
             super_region_name=callout_data.get("superRegionName"),
-            location=Location.from_dict(callout_data.get("location", {})),
+            location=Location(**callout_data.get("location", {})),
         )
 
     def to_dict(self) -> dict[str, Any]:
