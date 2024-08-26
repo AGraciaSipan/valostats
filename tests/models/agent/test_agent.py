@@ -58,21 +58,26 @@ def test_invalid_agent_uuid(invalid_agent_data):
 
 def test_agent_from_dict(agent_data):
     agent = Agent.from_dict(agent_data)
-    assert agent.uuid == AgentUUID(agent_data["uuid"])
-    assert agent.name == agent_data["displayName"].replace("/", "")
-    assert agent.display_icon == agent_data["displayIcon"]
-    assert agent.display_icon_small == agent_data["displayIconSmall"]
-    assert agent.role.uuid == RoleUUID(agent_data["role"]["uuid"])
-    assert agent.role.name == agent_data["role"]["displayName"]
-    assert len(agent.abilities) == len(agent_data["abilities"])
-    assert agent.abilities[0].slot == AbilitySlot(agent_data["abilities"][0]["slot"])
-    assert agent.abilities[0].name == agent_data["abilities"][0]["displayName"]
-    assert agent.abilities[1].slot == AbilitySlot(agent_data["abilities"][1]["slot"])
-    assert agent.abilities[1].name == agent_data["abilities"][1]["displayName"]
-    assert agent.abilities[2].slot == AbilitySlot(agent_data["abilities"][2]["slot"])
-    assert agent.abilities[2].name == agent_data["abilities"][2]["displayName"]
-    assert agent.abilities[3].slot == AbilitySlot(agent_data["abilities"][3]["slot"])
-    assert agent.abilities[3].name == agent_data["abilities"][3]["displayName"]
+
+    expected_abilities = [
+        (AbilitySlot.Q_SLOT, "Ability 1 Name"),
+        (AbilitySlot.E_SLOT, "Ability 2 Name"),
+        (AbilitySlot.C_SLOT, "Grenade Name"),
+        (AbilitySlot.X_SLOT, "Ultimate Name"),
+        (AbilitySlot._SLOT, "Passive Name"),
+    ]
+
+    assert agent.uuid == AgentUUID("601dbbe7-43ce-be57-2a40-4abd24953621")
+    assert agent.name == "TestAgent"
+    assert agent.display_icon == "icon.png"
+    assert agent.display_icon_small == "small_icon.png"
+    assert agent.role.uuid == RoleUUID("4ee40330-ecdd-4f2f-98a8-eb1243428373")
+    assert agent.role.name == "Controller"
+    assert len(agent.abilities) == 5
+
+    for ability, (expected_slot, expected_name) in zip(agent.abilities, expected_abilities):
+        assert ability.slot == expected_slot
+        assert ability.name == expected_name
 
 
 def test_agent_to_dict(agent_data):
