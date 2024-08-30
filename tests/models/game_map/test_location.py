@@ -10,8 +10,8 @@ def empty_location_data():
 
 def test_location_from_dict(location_data):
     location = Location(**location_data)
-    assert location.x == location_data["x"]
-    assert location.y == location_data["y"]
+    assert location.x == 10.0
+    assert location.y == -20.0
 
 
 def test_location_from_empty_dict(empty_location_data):

@@ -29,8 +29,30 @@ def test_invalid_ability_slot(invalid_ability_data):
 
 def test_ability_from_dict(ability_data):
     ability = Ability.from_dict(ability_data)
-    assert ability.slot == AbilitySlot(ability_data["slot"])
-    assert ability.name == ability_data["displayName"]
+
+    expected_slot = None
+    expected_name = None
+
+    if ability_data["slot"] == "Ability1":
+        expected_slot = AbilitySlot.Q_SLOT
+        expected_name = "Ability 1 Name"
+    elif ability_data["slot"] == "Ability2":
+        expected_slot = AbilitySlot.E_SLOT
+        expected_name = "Ability 2 Name"
+    elif ability_data["slot"] == "Grenade":
+        expected_slot = AbilitySlot.C_SLOT
+        expected_name = "Grenade Name"
+    elif ability_data["slot"] == "Ultimate":
+        expected_slot = AbilitySlot.X_SLOT
+        expected_name = "Ultimate Name"
+    elif ability_data["slot"] == "Passive":
+        expected_slot = AbilitySlot._SLOT
+        expected_name = "Passive Name"
+    else:
+        pytest.fail(f"Unexpected slot value: {ability_data['slot']}")
+
+    assert ability.slot == expected_slot
+    assert ability.name == expected_name
 
 
 def test_ability_to_dict(ability_data):
